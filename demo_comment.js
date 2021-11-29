@@ -3,7 +3,7 @@ const user = {  // mysql 접속 설정
     host: 'localhost',
     port: '3306',
     user: 'root',
-    password: 'jae576792@',
+    password: '@@@@@@@@',
     database: 'test_db'
 };
 const connection = mysql.createConnection(user); // DB 커넥션 생성
