@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang ="kor">
+    <head>
+        <meta charset = "UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name ="view point" content ="width=device-width, initial-scale=1.0"/>
+        <title>댓글 프로그램<%-id_array%></title>
+    </head>
+    <body>
+        <h1>댓글작성</h1>
+        <% for(var i = 0;i<comment_array.length;i++){ %>
+            <p>id : <%- comment_array[i]%> <%-id_array[i]%> </p>
+        <%}%>
+        <form action="http://localhost:8080/comment" method="POST">
+            <table>
+                <tr>
+                    <td><input type="text" name= "id" placeholder="닉네임"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="comment" placeholder ="댓글"/></td>
+                </tr>
+            </table>
+            <input type ="submit" value = "등록" />
+        </form>
+    </body>
+</html>
