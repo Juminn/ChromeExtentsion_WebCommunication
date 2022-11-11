@@ -1,9 +1,0 @@
-{
-  "name": "video-comment",
-  "version": "0.0.0",
-  "description": "VideoComment",
-  "main": "server.js",
-  "author": {
-    "name": ""
-  }
-}

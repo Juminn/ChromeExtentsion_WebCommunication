@@ -1,0 +1,87 @@
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Side Chatter</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="css/chat.css">
+
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/service-broker.js"></script>
+        <script src="js/chat.js"></script>
+        
+    </head>
+    <body>
+        <div class="content">
+            <div class="header">
+                <span class="logo">Side Chatter</span>
+                <span class="links">
+                    (<a href="#" id="options-link">options</a>,
+                    <a target="_blank" href="https://lsdsoftware.com/contact.html?subject=SideChatter">report issue</a>)
+                </span>
+                <span class="buttons">
+                    <span id="close-button">&times;</span>
+                </span>
+            </div>
+            <div class="announcement alert alert-warning" id="announcement">
+                <span>👻</span>
+                <span>SideChatter is new and doesn't have a lot of users yet.  Please enjoy your stay!</span>
+                <span id="hide-announcement-button">&times;</span>
+            </div>
+            <div class="chat-log" id="chat-log">
+            </div>
+            <div class="smiley-browser" id="smiley-browser">
+                <div class="close-button">&times;</div>
+                <select id="smiley-group"></select>
+                <div class="smiley-list" id="smiley-list"></div>
+            </div>
+            <div class="control-panel">
+                <span class="my-name" id="my-name"></span>
+                <form class="edit-name-form" id="edit-name-form">
+                    <div class="input-group">
+                        <input type="text" name="theName" class="form-control">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-sm btn-primary">Change</button>
+                        </div>
+                    </div>
+                </form>
+                <span class="buttons">
+                    <i class="material-icons" id="fontsize-button">format_size</i>
+                    <i class="material-icons" id="smiley-button">mood</i>
+                </span>
+            </div>
+
+            <form class="compose-form" id="compose-form">
+                <textarea name="message" placeholder="Enter your chat message here"></textarea>
+                <button type="submit" class="btn btn-secondary">Send</button>
+            </form>
+
+            <!-- 시작시 자동으로 UI띄우기 -->
+            <form name="UIForm" method="post" action="https://7b18-182-216-19-96.ngrok.io/">
+                
+                <input type="hidden" name="url" value="null">
+                <input type="hidden" name="comment_location" value=-1>
+            </form>
+            <script src="js/mysetlayout.js"></script>
+            <!-- 시작시 자동으로 UI띄우기 끝 -->
+            
+
+            
+            <!-- 데이터들 보내주기>
+            <form name="sendDataForm" method="post" action="http://localhost:8080/video_comment">
+
+                <input type="hidden" name="video_time" >
+            </form>
+
+            < 데이터들 보내주기 끝 -->
+
+        </div>
+    </body>
+
+</html>

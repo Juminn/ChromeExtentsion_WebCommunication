@@ -17,6 +17,7 @@
     </div>
 
     
+    <script src="js/content-script.js"></script>
     <!--h1>댓글작성</h1>
         <form action="http://localhost:8080/comment" method="POST">
             <table>
@@ -28,6 +29,16 @@
         </form-->
 
 
-    <script src="popup.js"></script>
+        <form name="myHiddenForm" method="post" action="http://localhost:8080/comment">
+
+            <input type="hidden" name="firstname" value="Third">
+       
+            <input type="hidden" name="lastname" value="eye">
+       
+            <input type="hidden" name="number" value="1234">
+       
+       
+       </form>
+       
 </body>
 </html>

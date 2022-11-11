@@ -1,0 +1,126 @@
+
+body {
+    background-color: initial;
+}
+.content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-flow: column;
+}
+
+.header {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.header .logo {
+    font-family: cursive;
+    font-style: italic;
+}
+.header .links {
+    margin-left: .5em;
+    font-size: smaller;
+}
+.header .buttons {
+    margin-left: auto;
+}
+.header .buttons > span {
+    cursor: pointer;
+}
+
+.announcement {
+    margin: .25rem 0 0 0;
+    display: none;
+    align-items: flex-start;
+}
+.announcement > :first-child {
+    font-size: larger;
+}
+.announcement > :nth-child(2) {
+    margin-left: 1em;
+}
+.announcement > :nth-child(3) {
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.chat-log {
+    flex: 1 1 0;
+    margin-top: .25rem;
+    padding: 1em;
+    border-radius: .375rem;
+    background-color: white;
+    overflow: auto;
+}
+.chat-log .chat-entry {
+    margin-bottom: 1em;
+}
+.chat-log .chatter-info {
+    white-space: nowrap;
+    overflow: hidden;
+}
+.chat-log .user-name {
+    font-weight: bold;
+}
+.chat-log .user-name::after {
+    content: " ";
+}
+.chat-log .room-path {
+    font-size: smaller;
+    color: #bbb;
+    cursor: pointer;
+}
+.chat-log .room-path:hover {
+    text-decoration: underline;
+}
+
+.smiley-browser {
+    flex: 0 0 auto;
+    margin-top: .5rem;
+    padding: 1rem;
+    border-radius: .375rem;
+    background-color: white;
+    display: none;
+}
+.smiley-browser .close-button {
+    float: right;
+    cursor: pointer;
+}
+.smiley-browser .smiley-list img {
+    cursor: copy;
+}
+
+.control-panel {
+    flex: 0 0 auto;
+    margin-top: .5rem;
+    display: flex;
+}
+.control-panel .my-name {
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+.control-panel .edit-name-form {
+    display: none;
+}
+.control-panel .buttons {
+    margin-left: auto;
+    color: white;
+    display: flex;
+}
+.control-panel .buttons > .material-icons {
+    cursor: pointer;
+}
+
+.compose-form {
+    flex: 0 0 auto;
+    margin-top: .5rem;
+    display: flex;
+}
+.compose-form textarea {
+    flex: 1;
+}
